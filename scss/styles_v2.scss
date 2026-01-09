@@ -1,0 +1,222 @@
+@import "variables";
+@import "mixins";
+
+// Глобальні налаштування 
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: $basic-font-family;
+    font-size: $fs-text-basic;
+    color: $black-text-color;
+}
+
+.container{
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include media($bp-l) {
+        padding: 0 20px ;
+    }
+}
+
+h1{
+    margin-top: 160px;
+    font-size: $fs-h1;
+    font-weight: $fw-medium;
+
+    @include media($bp-l) {
+        font-size: 40px;
+    }
+
+     @include media($bp-m){
+        font-size: 32px;
+     }
+}
+
+h1 + p{
+        color: $grey-text-color;
+        margin-top: 60px;
+        max-width: 540px;
+
+
+    @include media($bp-l) {
+        font-size: 15px;
+    }
+    }
+
+h2{
+    font-size: $fs-h2;
+    font-weight: $fw-medium;
+    text-align: center;
+
+    @include media($bp-l) {
+        font-size: 28px;}
+
+
+     @include media($bp-m){
+        font-size: 24px;} 
+}
+
+h2 + p{
+    color: $grey-text-color;
+    margin-top: 50px;
+    max-width: 540px;
+    margin: 50px auto 0 ;
+
+    @include media($bp-l) {
+        font-size: 14px;}
+}
+
+h3{
+    font-size: $fs-h3;
+    font-weight: $fw-medium;
+
+
+    @include media($bp-l) {
+        font-size: 20px;}
+
+
+     @include media($bp-m){
+        font-size: 13 px;}
+}
+
+button{
+    font-family: $basic-font-family;
+    padding: 24px 40px;
+    font-size: $fs-text-basic;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    @include media($bp-l) {
+       padding:20px 30px;
+    }
+}
+
+button.primary{
+    background-color: $primary-color;
+    color : $white-text-color;
+
+    &:hover{
+        background-color: $hover-bt-color
+    }
+}
+
+// hero
+
+.hero{
+    padding: 80px 0 140px;
+    background-color: $bg-hero-color;
+}
+
+.hero__content{
+    margin-bottom: 65px;
+}
+
+nav{
+    ul{
+        
+        display: flex;
+        align-items: center;
+        gap: 64px;
+        flex-wrap: wrap;
+    }
+}
+
+nav{
+    a{
+        color: $black-text-color;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover{
+            color: $primary-color;
+        }
+    }
+}
+
+// About
+
+.about{
+    padding: 100px 0;
+    background-color: $bg-about-color;
+}
+
+// Advantages
+
+.advantages{
+    padding: 100px 0;
+    background-color: $primary-color;
+}
+
+.advantages__list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include media($bp-l) {
+        gap: 40px;
+        justify-content: center;
+    }
+
+     @include media($bp-m){
+         gap: 40px;
+        justify-content: center;
+    }
+}
+
+.advantages__item{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+    @include media($bp-l) {
+        width: calc(33.33% - 40px);
+        justify-content: center;
+    }
+
+     @include media($bp-m){
+         width: calc(50% - 40px);
+        justify-content: center;
+    }
+}
+
+.advantages__info{
+  display: flex ;
+  flex-direction: column;
+  gap: 10px ;
+  color: $white-text-color;
+}
+
+// Works
+
+.works{
+    padding: 100px 0;
+    background-color: $bg-about-color;
+}
+
+
+.works__video {
+ margin-top: 60px; 
+   aspect-ratio: 16 / 9;
+ text-align: center;
+}
+
+// Footer
+
+.footer{
+    padding: 50px 0 ;
+    background-color:$primary-color;
+    color: $white-text-color;
+}
+
+.footer__copy{
+    margin-top: 20px;
+    font-size: $fs-text-sm;
+}
